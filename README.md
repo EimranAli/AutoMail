@@ -12,3 +12,7 @@
 3. wait for some time till dependencies listed in the pom file are downloaded from the relevant artifactories
 4. download relevant chromedriver for your system from [here](https://chromedriver.chromium.org/downloads) and put it at project's root directory
 5. setup done!
+
+
+**Note** :  
+The demonstration using selenium framework is for educational purpose only!
