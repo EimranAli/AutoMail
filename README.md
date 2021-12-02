@@ -5,6 +5,7 @@
 3.AutoMailTester class is used to drive the lambda function.
 
 
+
 **Instructions for the setup** :  
 1. import the project in eclipse
 2. mavenize the project --> right click on the project -> configure -> Convert to Maven Project
