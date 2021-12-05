@@ -2,7 +2,7 @@
 
 1.This project lets you test *AWS lambda* function offline.  
 2.*Lambda* function in this project will take parameters(receiver email id, subject and message) from the user through eclipse console and send email using selenium framework.  
-3.AutoMailTester class is used to trigger the *lambda* function.  
+3.**AutoMailTester** class is used to trigger the *lambda* function.  
 
 
 
