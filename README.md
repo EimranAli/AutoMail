@@ -15,4 +15,4 @@
 
 
 **Note** :  
-The demonstration using selenium framework is for educational purpose only!
+Demonstration using selenium framework is for educational purposes only!
