@@ -59,19 +59,19 @@ public class AutoMail implements RequestHandler<Object, Object> {
 
 		// store identifiers to locate web elements.
 		// AbsXPath is absolute xpath, RelXPath is relative xpath
-		final String signInButtonAbsXPath = "/html/body/header/div/aside/div/nav/ul/li[2]/a";
-		final String emailBoxAbsXPath = "/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div[1]/div[3]/div/div/div/div[4]/div/div/div/div/input";
-		final String emailBoxRelXPath = "//*[@id=\"i0116\"]";
-		final String emailNextButtonRelXPath = "//*[@id=\"idSIButton9\"]";
-		final String passwordBoxAbsXPath = "/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[3]/div/div[2]/input";
-		final String passwordNextAbsXPath = "/html/body/div/form[1]/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[4]/div[2]/div/div/div/div/input";
-		final String staySignedInTestAbsXPath = "/html/body/div/form/div/div/div[2]/div[1]/div/div/div/div/div/div[3]/div/div[2]/div/div[1]";
-		final String staySignedInNoButton = "//*[@id=\"idBtn_Back\"]";
-		final String newMessageButtonClassName = "_9fiU2J67uJPVP0DBdOFMW";
-		final String receiverBoxRelXPath = "//*[@id=\"ReadingPaneContainerId\"]/div/div/div/div[1]/div[1]/div[1]/div/div[1]/div/div/div/div/div[1]/div/div/input";
-		final String receiverBoxClassName = "ms-BasePicker-input";
-		final String subjectBoxClassName = "ms-TextField-field";
-		final String messageBoxClassName = "_16VySYOFix816mo3KsgOhw";
+		final String signInButtonAbsXPath = "";
+		final String emailBoxAbsXPath = "";
+		final String emailBoxRelXPath = "";
+		final String emailNextButtonRelXPath = "";
+		final String passwordBoxAbsXPath = "";
+		final String passwordNextAbsXPath = "";
+		final String staySignedInTestAbsXPath = "";
+		final String staySignedInNoButton = "";
+		final String newMessageButtonClassName = "";
+		final String receiverBoxRelXPath = "";
+		final String receiverBoxClassName = "";
+		final String subjectBoxClassName = "";
+		final String messageBoxClassName = "";
 
 		// create an instance of WebDriverWait set to 10 seconds max wait time
 		WebDriverWait wait = new WebDriverWait(driver, 10);
@@ -98,8 +98,8 @@ public class AutoMail implements RequestHandler<Object, Object> {
 		// click signIn button
 		signIn.click();
 		// store email account creds in a variable for testing
-		String email = "username"; // use your outlook username
-		String password = "password"; // use your outlook password
+		String email = "username"; // use your email username
+		String password = "password"; // use your email password
 
 		// wait for email box to appear . reusing the wait created earlier which is set
 		// to wait for a max of 10 seconds
@@ -116,13 +116,13 @@ public class AutoMail implements RequestHandler<Object, Object> {
 		// click next button to login
 		driver.findElement(By.xpath(passwordNextAbsXPath)).click();
 
-		// if "stay signed in ?"page appears then click "No" and proceed further, else
+		// if any page asking to stay signed in appears ,then click "No" and proceed further, else
 		// just display a mssg saying it didnt appear
 		try {
 			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(staySignedInTestAbsXPath)));
 			driver.findElement(By.xpath(staySignedInNoButton)).click();
 		} catch (NoSuchElementException e) {
-			System.out.println("'Stay Signed in ?' page didn't appear");
+			System.out.println("Page, asking to stayed signed in didn't appear");
 			e.printStackTrace(); // for details on exception
 		}
 
